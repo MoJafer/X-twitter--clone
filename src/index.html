@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./animate.css" />
+    <title>X(twitter) Clone </title>
+</head>
+
+<body>
+
+    <main class="h-screen flex flex-row">
+
+        <!-- Post Button (for mobile) -->
+        <button class="bg-primary text-white h-12 w-12 shadow-lg p-3 rounded-full fixed bottom-20 right-10 md:hidden">
+            <i class="fa fa-pen"></i>
+        </button>
+        
+        <aside class="sidebar wow slideInLeft">
+            <!-- <a href="#!" class="mb-5"><i class="text-blue-400 fab fa-twitter fa-2x "></i></a> -->
+            <a href="#!"  class="mb-3 w-[50px] h-[50px] p-2 rounded-full hover:bg-gray-100 block max-md:hidden">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="">
+                    <g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g>
+                </svg>
+            </a>
+
+            <a href="#!" class="sidebar-link text-black font-bold">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#!" class="sidebar-link">
+                <i class="fa fa-search"></i>
+                <span>Explore</span>
+            </a>
+            
+            <a href="#!" class="sidebar-link">
+                <i class="far fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+            
+            <a href="#!" class="sidebar-link">
+                <i class="far fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+            
+            <a href="#!" class="sidebar-link max-md:hidden">
+                <i class="fa fa-list"></i>
+                <span>Lists</span>
+            </a>
+
+            <a href="#!" class="sidebar-link max-md:hidden">
+                <i class="fa fa-user-friends"></i>
+                <span>Communities</span>
+            </a>
+            
+            <a href="#!" class="sidebar-link max-md:hidden">
+                <i class="far fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="#!" class="sidebar-link max-md:hidden">
+                <i class="fa fa-ellipsis-v"></i>
+                <span>More</span>
+            </a>
+            
+            <button class="button font-bold lg:px-20 lg:py-3 py-2 px-3 self-center max-md:hidden">Post</button>
+            
+            <div class="flex lg:flex-row flex-col items-center mt-5 max-md:hidden">
+                <a href="#!" class="mr-2">
+                    <img src="./images/avatar.png" alt="user" class="w-[38px] rounded-full"/>
+                </a>
+                <div class="flex flex-col items-center lg:items-start text-xs">
+                    <a href="#!" class="font-bold text-black">Mohammad Jaffer</a>
+                    <a href="#!" class="text-muted">@mo_jaffer</a>
+                </div>
+                <i class="fa fa-"></i>
+            </div>
+
+
+            
+        </aside>
+
+        <!-- Timeline -->
+        <div class="relative lg:w-6/12 md:w-10/12 w-full border-solid border-[1px] overflow-y-scroll wow slideInUp">
+            
+            <div class="timeline-options">
+                <div class="options">
+                    <a href="#!" class="active">For you</a>
+                    <a href="#!" class="text-secondary">Following</a>
+                </div>
+                <a href="#!" class="icon text-center leading-[33px]"><i class="fa fa-cog"></i></a>
+            </div>
+            <!-- <hr class=""/> -->
+
+            <div class="mt-5">
+                
+                <!-- Post Form -->
+                <form class="p-5" method="post" action="">
+
+                    <div class="flex flex-row ">
+                        <a href="#!" class="mr-3"><img src="./images/avatar.png" alt="image" class="w-[42px] rounded-full"/></a>
+                        <textarea placeholder="What's Happening?" rows="5" class="w-full focus:outline-none"></textarea>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:justify-between mt-2 md:items-center">
+                        <div class="text-primary text-md md:ml-12 max-md:mb-5">
+                            <a href="#!" class="icon p-2 mr-2" title="Medai"><i class="fa fa-image"></i></a>
+                            <a href="#!" class="icon p-2 mr-2" title="GIF"><i class="fa fa-camera-retro"></i></a>
+                            <a href="#!" class="icon p-2 mr-2" title="Poll"><i class="fa fa-poll"></i></a>
+                            <a href="#!" class="icon p-2 mr-2" title="Emoji"><i class="far fa-smile"></i></a>
+                            <a href="#!" class="icon p-2 mr-2" title="Schedule"><i class="far fa-calendar-plus"></i></a>
+                            <a href="#!" class="icon p-2 mr-2" title="Locaion"><i class="fa fa-map-marker-alt"></i></a>
+
+                        </div>
+                        <button type="submit" class="button bg-primary text-sm">Tweet</button>
+                    </div>
+                </form>
+                <!-- /Post Form -->
+
+                <!-- tweets -->
+
+                <!-- post-1 -->
+                <div class="p-5 hover:bg-gray-100">
+                    <div class="flex flex-row justify-between items-start mb-5">
+                        <div class="flex flex-row">
+                            <a href="#!" class="mr-3"><img src="./images/user-1.jpg" alt="image" class="w-[40px] rounded-full"/></a>
+                            <div class="text-sm">
+                                <a href="#!" class="font-bold">UEFA Champions League</a>
+                                <span class="text-muted">@ChampionsLeague - 4h</span>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <button class="icon" onclick="handlePostOptions('1')"><i class="fa fa-ellipsis-h"></i></button>
+                            <div id="dropdown-1" class="dropdown ">
+                                <a href="#!"><i class="far fa-frown mr-3"></i><span>Not interested in this post</span></a>
+                                <a href="#!"><i class="fa fa-user-minus mr-3"></i><span>Unfollow @username</span></a>
+                                <a href="#!"><i class="fa fa-user-plus mr-3"></i><span>Subscribe to @username</span></a>
+                                <a href="#!"><i class="fa fa-list mr-3"></i><span>Add/remove @username</span></a>
+                                <a href="#!"><i class="fa fa-volume-mute mr-3"></i><span>Mute @username</span></a>
+                                <a href="#!"><i class="fa fa-ban mr-3"></i><span>Block @username</span></a>
+                                <a href="#!"><i class="fa fa-chart-bar mr-3"></i><span>View post engagements</span></a>
+                                <a href="#!"><i class="fa fa-code mr-3"></i><span>Embded post</span></a>
+                                <a href="#!"><i class="far fa-flag mr-3"></i><span>Report Post</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary">
+                        Two more for Haaland
+                        <br />
+                        <a href="#" class="text-blue-500">#UCL</a>
+                    </p>
+                    <img src="./images/post-1.jpeg" alt="image" class="rounded-2xl my-2"/>
+
+                    <div class="flex flex-row justify-between items-center md:text-lg text-xs text-muted">
+                        <div class="flex flex-row md:justify-between justify-start items-center w-10/12">
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Reply">
+                                    <i class="far fa-comment"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">7.2k</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Retweet">
+                                    <i class="fa fa-retweet"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">3.2k</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Like">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">4.8k</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="View">
+                                    <i class="fa fa-chart-bar"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">30.4k</span>
+                            </div>
+                        </div>
+                        <div class="w-2/12 flex flex-row justify-end">
+                            <button class="icon" title="Bookmark"><i class="far fa-bookmark"></i></button>
+                            <button class="icon" title="Share"><i class="fa fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /post-1 -->
+
+                <!-- post-2 -->
+                <div class="p-5 hover:bg-gray-100">
+                    <div class="flex flex-row justify-between items-start mb-5">
+                        <div class="flex flex-row">
+                            <a href="#!" class="mr-3"><img src="./images/user-2.jpg" alt="image" class="w-[40px] rounded-full"/></a>
+                            <div class="text-sm">
+                                <a href="#!" class="font-bold">Sky Sports Premier League</a>
+                                <span class="text-muted">@SkySportsPL - 13h</span>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <button class="icon" onclick="handlePostOptions('2')"><i class="fa fa-ellipsis-h"></i></button>
+                            <div id="dropdown-2" class="dropdown hidden">
+                                <a href="#!"><i class="far fa-frown mr-3"></i><span>Not interested in this post</span></a>
+                                <a href="#!"><i class="fa fa-user-minus mr-3"></i><span>Unfollow @username</span></a>
+                                <a href="#!"><i class="fa fa-user-plus mr-3"></i><span>Subscribe to @username</span></a>
+                                <a href="#!"><i class="fa fa-list mr-3"></i><span>Add/remove @username</span></a>
+                                <a href="#!"><i class="fa fa-volume-mute mr-3"></i><span>Mute @username</span></a>
+                                <a href="#!"><i class="fa fa-ban mr-3"></i><span>Block @username</span></a>
+                                <a href="#!"><i class="fa fa-chart-bar mr-3"></i><span>View post engagements</span></a>
+                                <a href="#!"><i class="fa fa-code mr-3"></i><span>Embded post</span></a>
+                                <a href="#!"><i class="far fa-flag mr-3"></i><span>Report Post</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary">Reply to this post with your Fantasy Football questions 💬 <br /> 
+                        The best ones will be answered on Saturday's pre-match show at 10.30am! 📺
+                    </p>
+                    <img src="./images/post-2.jpeg" alt="image" class="rounded-2xl my-2"/>
+
+                    <div class="flex flex-row justify-between items-center text-xs md:text-lg text-muted">
+                        <div class="flex flex-row md:justify-between justify-start items-center w-10/12">
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Reply">
+                                    <i class="far fa-comment"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">201</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Retweet">
+                                    <i class="fa fa-retweet"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">41</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Like">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">19</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="View">
+                                    <i class="fa fa-chart-bar"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">2.7k</span>
+                            </div>
+                        </div>
+                        <div class="w-2/12 flex flex-row justify-end">
+                            <button class="icon" title="Bookmark"><i class="far fa-bookmark "></i></button>
+                            <button class="icon" title="Share"><i class="fa fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /post-2 -->
+
+                <!-- post-3 -->
+                <div class="p-5 hover:bg-gray-100">
+                    <div class="flex flex-row justify-between items-start mb-5">
+                        <div class="flex flex-row">
+                            <a href="#!" class="mr-3"><img src="./images/user-2.jpg" alt="image" class="w-[40px] rounded-full"/></a>
+                            <div class="text-sm">
+                                <a href="#!" class="font-bold">Sky Sports Premier League</a>
+                                <span class="text-muted">@SkySportsPL - 13h</span>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <button class="icon" onclick="handlePostOptions('3')"><i class="fa fa-ellipsis-h"></i></button>
+                            <div id="dropdown-3" class="dropdown hidden">
+                                <a href="#!"><i class="far fa-frown mr-3"></i><span>Not interested in this post</span></a>
+                                <a href="#!"><i class="fa fa-user-minus mr-3"></i><span>Unfollow @username</span></a>
+                                <a href="#!"><i class="fa fa-user-plus mr-3"></i><span>Subscribe to @username</span></a>
+                                <a href="#!"><i class="fa fa-list mr-3"></i><span>Add/remove @username</span></a>
+                                <a href="#!"><i class="fa fa-volume-mute mr-3"></i><span>Mute @username</span></a>
+                                <a href="#!"><i class="fa fa-ban mr-3"></i><span>Block @username</span></a>
+                                <a href="#!"><i class="fa fa-chart-bar mr-3"></i><span>View post engagements</span></a>
+                                <a href="#!"><i class="fa fa-code mr-3"></i><span>Embded post</span></a>
+                                <a href="#!"><i class="far fa-flag mr-3"></i><span>Report Post</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary">
+                        BREAKING: Alphonse Areola wins Castrol Save of the Month for his save against Aston Villa to deny Ollie Watkins ⛔🧤
+                    </p>
+                    <img src="./images/post-3.jpeg" alt="image" class="rounded-2xl my-2"/>
+
+                    <div class="flex flex-row justify-between items-center text-xs md:text-lg text-muted">
+                        <div class="flex flex-row md:justify-between justify-start items-center w-10/12">
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Reply">
+                                    <i class="far fa-comment"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">201</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Retweet">
+                                    <i class="fa fa-retweet"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">41</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="Like">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">19</span>
+                            </div>
+                            <div class="flex flex-row items-center">
+                                <button class="icon" title="View">
+                                    <i class="fa fa-chart-bar"></i>
+                                </button>
+                                <span class="md:text-sm text-xs ml-1">2.7k</span>
+                            </div>
+                        </div>
+                        <div class="w-2/12 flex flex-row justify-end">
+                            <button class="icon" title="Bookmark"><i class="far fa-bookmark "></i></button>
+                            <button class="icon" title="Share"><i class="fa fa-share-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /post-3 -->
+
+
+            </div>
+        </div>
+        <!-- /Timeline -->
+
+        <!-- hastags -->
+        <div class="w-3/12 p-5 max-lg:hidden wow slideInRight">
+
+            <!-- Search Form -->
+            <form class="bg-gray-200 rounded-full py-2 px-5">
+                <i class="fa fa-search text-gray-400"></i>
+                <input type="text" placeholder="Search" class="focus:outline-none bg-slate-200"/>
+            </form>
+            <!-- /Search Form -->
+
+            <!-- Subscribe  -->
+            <div class="p-3 bg-gray-100 mt-5 rounded-xl">
+                <h2 class="text-xl font-extrabold ">Subscribe to Premium</h2>
+                <p class="font-bold text-sm my-3">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
+                <button type="submit" class="button text-md ">Subscribe</button>
+            </div>
+            <!-- /Subscribe -->
+
+            <!-- What’s happening -->
+            <div class="p-3 bg-gray-100 mt-5 rounded-xl">
+                <h2 class="text-xl font-bold mb-3">What’s happening</h2>
+                
+
+                <div class="cursor-pointer p-2 text-sm text-muted mb-3 hover:bg-gray-200 ">
+                    <div class="flex flex-row items-center justify-between mb-1">
+                        <span class="">Only on Twitter - Trending</span>
+                        <i class="fa fa-ellipsis-h"></i>
+                    </div>
+                    <span class="font-bold text-black">#trending_hashtag</span>
+                    <br />
+                    <span>1.4K posts</span>
+                </div>
+
+                <div class="cursor-pointer p-2 text-sm text-muted mb-3 hover:bg-gray-200 ">
+                    <div class="flex flex-row items-center justify-between mb-1">
+                        <span class="">Only on Twitter - Trending</span>
+                        <i class="fa fa-ellipsis-h"></i>
+                    </div>
+                    <span class="font-bold text-black">#trending_hashtag</span>
+                    <br />
+                    <span>1.4K posts</span>
+                </div>
+
+                <div class="cursor-pointer p-2 text-sm text-muted mb-3 hover:bg-slate-200 ">
+                    <div class="flex flex-row items-center justify-between mb-1">
+                        <span class="">Only on Twitter - Trending</span>
+                        <i class="fa fa-ellipsis-h"></i>
+                    </div>
+                    <span class="font-bold text-black">#trending_hashtag</span>
+                    <br />
+                    <span>1.4K posts</span>
+                </div>
+
+
+            </div>
+            <!-- What’s happening -->
+
+        </div>
+    </main>
+
+
+    <script src="./wow.min.js"></script>
+    <script>
+        new WOW().init({
+            offset: 50,
+        });
+        function handlePostOptions(id) {
+        var dropdown = document.getElementById('dropdown-'+ id );
+
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+@layer components {
+    .button {
+        @apply bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-[#0f1419d1];
+
+    }
+    /* .button:hover {
+        filter: brightness(1.70);
+    } */
+    .mobile-menu {
+        @apply fixed top-24 right-10 left-10 flex flex-col items-center bg-white p-5 rounded-2xl text-primary-blue z-50;
+    }
+    .mobile-menu a:not(:last-child) {
+        @apply mb-5;
+    }
+    .input {
+        @apply bg-transparent border-b-white border-b-2 focus:outline-none text-xl font-bold;
+    }
+
+    .timeline-options {
+        @apply sticky bg-white opacity-[0.9] w-full h-[50px] top-0 flex flex-row justify-between items-center border-b-2 z-50;
+    }
+    .timeline-options .options {
+        @apply h-full flex flex-row items-center text-[16px] text-muted;
+    }
+    .timeline-options .options a{
+        @apply py-3 px-8 hover:bg-gray-100;
+    }
+    .timeline-options .options a.active{
+        @apply underline underline-offset-[15px] decoration-4 font-bold text-primary;
+    }
+
+    .padding {
+        @apply md:px-[180px] px-5 py-[34px];
+    }
+    .button-outline {
+        @apply px-9 py-3 rounded-3xl border-solid border-2 border-[#3D37F1] text-[#3D37F1] font-bold;
+    }
+    .brands img {
+        @apply mr-5 ;
+    }
+    .footer-links a {
+        @apply mb-2 max-lg:items-center;
+    }
+
+    .footer-links a:hover {
+        @apply underline underline-offset-2;
+    }
+    .icon {
+        @apply w-10 h-10 p-1 hover:bg-gray-200 hover:text-primary rounded-full;
+    }
+    .sidebar {
+        @apply w-2/12 bg-white lg:sidebar-lg max-md:sidebar-mobile py-5 flex flex-col max-lg:items-center text-xl text-secondary ;
+    }
+    .sidebar-lg {
+        @apply w-3/12 px-10;
+    }
+    .sidebar-mobile {
+        @apply w-full py-2 fixed bottom-0 left-0 right-0 flex-row justify-around z-[99];
+    }
+    .sidebar a.sidebar-link {
+        @apply mb-3 rounded-full px-4 py-2 hover:bg-gray-100;
+    }
+    .sidebar a span {
+        @apply max-lg:hidden;
+    }
+    .sidebar a i {
+        @apply lg:mr-3;
+    }
+    .dropdown {
+        @apply absolute top-5 right-[40px] flex flex-col w-[260px] shadow-xl bg-white rounded-xl;
+    }
+    .dropdown a {
+        @apply p-3 hover:bg-gray-100;
+    }
+}
+
+.brands a {
+    margin-right: 50px;
+}
+
+.ellipse {
+    position: absolute;
+    left: -2.72%;
+    right: -12.17%;
+    top: 66.5%;
+    bottom: -0.14%;
+    background: #141572;
+    filter: blur(50px);
+}
+
+/* .brands img:last-child:nth-child(7n - 1) {
+    grid-column-end: -1;
+}
+
+.brands img:nth-last-child(6):nth-child(6n + 1) {
+    grid-column-end: 10;
+} */
